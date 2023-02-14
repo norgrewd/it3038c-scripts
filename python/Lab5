@@ -1,0 +1,6 @@
+import datetime
+
+birthdate_in = input("Please enter your birthdate in the format MM-DD-YYYY: ")
+birthdate = datetime.datetime.strptime(birthdate_in, "%m-%d-%Y")
+age_seconds = (datetime.datetime.now() - birthdate).total_seconds()
+print("Your age in seconds is: {} seconds".format(int(age_seconds)))
